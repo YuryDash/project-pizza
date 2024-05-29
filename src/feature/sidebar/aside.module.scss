@@ -1,0 +1,17 @@
+.aside {
+  //border: 1px solid #d77afc;
+
+  .navigation {
+    cursor: pointer;
+    font-size: 20px;
+    margin-bottom: 10px;
+    transition-duration: 0.3s;
+
+    &:hover {
+      transition-duration: 0.3s;
+      color: #d8d6d6;
+      text-shadow: 1px 1px 15px;
+      text-decoration: underline  #d8d6d6;
+    }
+  }
+}
