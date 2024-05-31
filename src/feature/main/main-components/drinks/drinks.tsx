@@ -7,6 +7,29 @@ type Props = {
 export function Drinks({test}: Props) {
   return (
     <div className={s.wrapper}>
+      <h2>drinks</h2>
+      {test}
+      <br/>
+      {test}
+      <br/>
+      {test}
+      <br/>
+      {test}
+      <br/>
+      {test}
+      <br/>
+      {test}
+      <br/>
+      {test}
+      <br/>
+      {test}
+      <br/>
+      {test}
+      <br/>
+      {test}
+      <br/>
+      {test}
+      <br/>
       {test}
     </div>
   );

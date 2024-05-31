@@ -1,0 +1,11 @@
+.wrapper {
+  border-radius: 30px;
+  background-color: var(--color-info-500);
+  transition-duration: 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    transition-duration: 0.2s;
+    background-color: var(--color-info-300);
+  }
+}

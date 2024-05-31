@@ -1,8 +1,6 @@
-import {Aside} from "../feature/sidebar/aside.tsx";
-import {Header} from "../feature/header/header.tsx";
-import {Main} from "../feature/main/main.tsx";
-import {Footer} from "../feature/footer/footer.tsx";
 import s from './app.module.scss'
+import {Aside, Footer, Header, Main} from "../feature";
+import {HotOffers} from "../feature/main/main-components/hot-offers/hot-offers.tsx";
 
 function App() {
 
@@ -12,6 +10,7 @@ function App() {
       <div className={s.asideWrapper}><Aside/></div>
       <div className={s.mainWrapper}><Main/></div>
       <div className={s.footerWrapper}><Footer/></div>
+      <div style={{width:'800px', height:'400px'}}><HotOffers/></div>
     </div>
   )
 }

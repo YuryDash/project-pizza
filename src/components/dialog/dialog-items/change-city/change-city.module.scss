@@ -1,0 +1,21 @@
+.wrapper {
+
+  .cities {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 40px;
+    justify-content: center;
+    padding: 0;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+  }
+  .city {
+    &:hover{
+      text-decoration: underline;
+      text-decoration-thickness: 3px;
+    }
+  }
+}

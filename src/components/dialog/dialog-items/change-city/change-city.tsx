@@ -1,13 +1,14 @@
 import s from './change-city.module.scss'
+import {RadioGroup} from "../../../radio-group/radio-group.tsx";
 
 type Props = {
-  test: any
+  test?: any
 }
 
-export function ChangeCity({test}: Props) {
+export function ChangeCity({}: Props) {
   return (
     <div className={s.wrapper}>
-      {test}
+      <RadioGroup />
     </div>
   )
 }

@@ -1,22 +1,42 @@
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  border: 1px solid red;
   display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header"
+    "aside offers"
+    "aside main"
+    "aside footer";
+  height: auto;
 
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto;
+  .headerWrapper {
+    grid-area: header;
+  }
 
-  .headerWrapper{
-    grid-column: span 3;
+  .asideWrapper {
+    grid-area: aside;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
   }
-  .footerWrapper{
-    grid-column: span 3;
+
+  .offersWrapper {
+    grid-area: offers;
+    margin: 50px 0 0 50px;
   }
-  .asideWrapper{
+
+  .mainWrapper {
+    grid-area: main;
     margin: 50px;
   }
-  .mainWrapper{
-    margin: 50px;
+
+  .footerWrapper {
+    grid-area: footer;
   }
 }

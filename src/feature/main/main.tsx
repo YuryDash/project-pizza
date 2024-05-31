@@ -9,15 +9,28 @@ type Props = any
 
 export function Main({}: Props) {
 
- const text = "ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam cumque eaque est harum, maiores minima molestiae nostrum pariatur, quo rem sunt temporibus tenetur? Perspiciatis!"
+  const text = "ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam cumque eaque est harum, maiores minima molestiae nostrum pariatur, quo rem sunt temporibus tenetur? Perspiciatis!"
 
   return (
     <main className={s.main}>
-     <Pizza test={text}/>
-     <Snacks test={text}/>
-     <Deserts test={text}/>
-     <Drinks test={text}/>
-     <Sauces test={text}/>
+      {/*<div className={s.offersWrapper}>*/}
+      {/*  <HotOffers/>*/}
+      {/*</div>*/}
+      <div id="pizza">
+        <Pizza test={text}/>
+      </div>
+      <div id="snacks">
+        <Snacks test={text}/>
+      </div>
+      <div id="deserts">
+        <Deserts test={text}/>
+      </div>
+      <div id="drinks">
+        <Drinks test={text}/>
+      </div>
+      <div id="sauces">
+        <Sauces test={text}/>
+      </div>
     </main>
 
   );

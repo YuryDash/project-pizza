@@ -1,17 +1,20 @@
 .aside {
   //border: 1px solid #d77afc;
+  display: flex;
+  flex-direction: column;
 
   .navigation {
     cursor: pointer;
-    font-size: 20px;
+    font-size: var(--font-size-xl);
     margin-bottom: 10px;
     transition-duration: 0.3s;
+    color: var(--color-light-900);
 
     &:hover {
       transition-duration: 0.3s;
-      color: #d8d6d6;
+      color: var(--color-light-100);
       text-shadow: 1px 1px 15px;
-      text-decoration: underline  #d8d6d6;
+      text-decoration: underline var(--color-light-100);
     }
   }
 }
