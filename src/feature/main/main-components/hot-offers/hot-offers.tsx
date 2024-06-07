@@ -1,45 +1,53 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import s from './hot-offers.module.scss'
+import {mapped} from "../../../../assets/sliderArr.ts";
+import {useRef, useState} from "react";
+import {DotsPaging} from "./dots-paging/dots-paging.tsx";
 
 type Props = {}
 
 export function HotOffers({}: Props) {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const sliderRef = useRef<Slider>(null);
+
+
   const settings = {
-    className: "center",
-    centerMode: true,
-    infinite: true,
-    centerPadding: "260px",
-    slidesToShow: 1,
-    speed: 1500,
     dots: true,
+    infinite: true,
+    speed: 1900,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 4000,
+    centerMode: true,
+    arrows: false,
+    customPaging: (i: number) => (
+      <DotsPaging
+        toggleSlide={(slideIndex) => {
+          if (sliderRef.current) {
+            sliderRef.current.slickGoTo(slideIndex);
+          }
+        }}
+        i={i}
+        currentSlide={currentSlide}
+      />
+    ),
+    afterChange: (index: number) => setCurrentSlide(index),
   };
 
   return (
-    <div className="slider-container" style={{border: '1px solid red', height: '100%'}}>
-      <Slider {...settings}>
-        <div>
-          <h3>1</h3>
-        </div>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
-      </Slider>
+    <div className={s.content}>
+      <div className={s.container}>
+        <Slider ref={sliderRef} {...settings} >
+          {mapped.map((item) => (
+            <div className={s.imgBody} key={item}>
+              <img className={s.image} src={item} alt={item}/>
+            </div>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 }
-

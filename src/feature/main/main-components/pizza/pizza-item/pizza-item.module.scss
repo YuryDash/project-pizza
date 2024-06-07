@@ -1,0 +1,104 @@
+.wrapper {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-light-900);
+  padding: 10px;
+
+  box-shadow: 0 0 5px var(--color-light-900);
+  border-radius: 4px;
+
+  .image {
+    user-select: none;
+    height: 330px;
+    width: 330px;
+
+    .img {
+      object-fit: cover;
+      max-width: 100%;
+    }
+  }
+
+  .descriptionPizza {
+
+
+    .heading {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      color: var(--color-light-500);
+      font-size: var(--font-size-m);
+      font-weight: 700;
+    }
+
+    .info {
+
+    }
+
+
+    .productComposition {
+      font-size: var(--font-size-xs);
+      cursor: default;
+
+    }
+  }
+
+  .sizeWrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 20px;
+    margin: 10px 10px 5px 10px;
+    font-size: var(--font-size-s);
+
+    .size {
+      user-select: none;
+      color: var(--color-light-900);
+
+    }
+
+    .weight {
+      user-select: none;
+      color: var(--color-light-100);
+    }
+  }
+
+  .btnsSize {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 20px 0;
+  }
+
+  .base {
+    font-size: var(--font-size-s);
+    user-select: none;
+  }
+
+  .btnsBase {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-template-rows: auto auto;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    &__item {
+      width: 50%
+    }
+  }
+
+  .result {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .prise {
+      cursor: default;
+      font-size: var(--font-size-xl);
+    }
+  }
+}

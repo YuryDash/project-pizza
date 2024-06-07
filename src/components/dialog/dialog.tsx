@@ -1,7 +1,6 @@
 import {Root, Trigger, Portal, Overlay, Title, Close, Content} from '@radix-ui/react-dialog';
 import s from './dialog.module.scss'
 import {ReactNode} from "react";
-import {ButtonLong} from "../buttons/button-long.tsx";
 
 type Props = {
   originator: ReactNode
@@ -22,7 +21,7 @@ export const DialogModal = ({originator, content, dialogTitle}: Props) => (
           <div className={s.ButtonGreen}>{content}</div>
         </div>
         <Close asChild>
-          <button><ButtonLong title={'OK'} paddingX={'0px'} paddingY={'48px'}/></button>
+          <button>ok</button>
         </Close>
         <Close asChild>
           <button className={s.IconButton} aria-label="Close">

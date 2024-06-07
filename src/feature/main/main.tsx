@@ -4,6 +4,7 @@ import {Drinks} from "./main-components/drinks/drinks.tsx";
 import {Snacks} from "./main-components/snacks/snacks.tsx";
 import {Deserts} from "./main-components/deserts/deserts.tsx";
 import {Sauces} from "./main-components/sauces/sauces.tsx";
+import {HotOffers} from "./main-components/hot-offers/hot-offers.tsx";
 
 type Props = any
 
@@ -13,9 +14,7 @@ export function Main({}: Props) {
 
   return (
     <main className={s.main}>
-      {/*<div className={s.offersWrapper}>*/}
-      {/*  <HotOffers/>*/}
-      {/*</div>*/}
+      <HotOffers/>
       <div id="pizza">
         <Pizza test={text}/>
       </div>

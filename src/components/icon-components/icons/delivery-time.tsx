@@ -12,11 +12,11 @@ export function DeliveryTime() {
         cx="10.5"
         cy="14.5"
         r="9.5"
-        stroke="#1378BB"
+        stroke="white"
         strokeWidth="2"
       ></circle>
       <path
-        stroke="#1378BB"
+        stroke="white"
         strokeLinecap="round"
         strokeWidth="2"
         d="M10.5 7.675V14.5M20.191 3.55L17.621 7M14.54 1H6.461"

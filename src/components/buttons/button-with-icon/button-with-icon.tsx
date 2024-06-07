@@ -1,17 +1,19 @@
-import {ReactNode} from "react";
+import React from 'react';
 import s from './button-with-icon.module.scss'
 
 type Props = {
-  title: string | ReactNode
-  image: ReactNode
+  title: string | React.ReactNode
+  image: React.ReactNode
+  backColor?: string
+  onClickHandler?: () => void
 }
 
-export function ButtonWithIcon({title, image}: Props) {
+export function ButtonWithIcon({title, image, backColor, onClickHandler}: Props) {
+
   return (
-    <button className={s.wrapper}>
+    <div onClick={onClickHandler} className={s.wrapper} style={{backgroundColor: backColor}}>
       <div className={s.image}>{image}</div>
       <div className={s.title}>{title}</div>
-    </button>
+    </div>
   );
 }
-

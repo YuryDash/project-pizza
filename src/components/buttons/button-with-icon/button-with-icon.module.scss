@@ -6,15 +6,17 @@
   cursor: pointer;
   border-radius: 25px;
   transition-duration: 0.2s;
+  user-select: none;
 
   &:hover {
     transition-duration: 0.2s;
-    box-shadow: 0 0 5px var(--color-light-100);
+    background-color: var(--color-info-100);
+    color: var(--color-light-100);
   }
 
   &:active {
     transition-duration: 0.2s;
-    box-shadow: 0 0 5px var(--color-accent-500);
+    box-shadow: 0 0 5px var(--color-info-500);
   }
 
   .image {

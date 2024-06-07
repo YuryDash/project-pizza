@@ -1,0 +1,50 @@
+.wrapper {
+
+  background-color: var(--color-light-100);
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .wrong {
+    color: var(--color-dark-500);
+    user-select: none;
+    font-weight: bold;
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+  }
+  .backButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 300px;
+    height: 50px;
+
+    background-color: var(--color-dark-700);
+    border-radius: 10px;
+
+    cursor: pointer;
+    &:hover{
+      background-color: var(--color-dark-300);
+    }
+    &:active{
+      background-color: var(--color-accent-300);
+    }
+  }
+}

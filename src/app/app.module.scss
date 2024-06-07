@@ -2,11 +2,10 @@
   max-width: 1280px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 120px 1fr;
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
     "header header"
-    "aside offers"
     "aside main"
     "aside footer";
   height: auto;
@@ -17,7 +16,7 @@
 
   .asideWrapper {
     grid-area: aside;
-    padding: 50px;
+    padding: 20px 0 50px 20px;
     display: flex;
     flex-direction: column;
     position: sticky;
@@ -26,14 +25,9 @@
     overflow-y: auto;
   }
 
-  .offersWrapper {
-    grid-area: offers;
-    margin: 50px 0 0 50px;
-  }
-
   .mainWrapper {
     grid-area: main;
-    margin: 50px;
+    margin: 20px 0;
   }
 
   .footerWrapper {
